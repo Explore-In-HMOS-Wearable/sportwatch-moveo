@@ -1,0 +1,62 @@
+{
+  "app": {
+    "bundleName": "com.hmosdemos.lite_wearable.moveo",
+    "vendor": "hmosdemos",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "deviceType": [
+      "liteWearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "abilities": [
+      {
+        "name": ".MainAbility",
+        "srcLanguage": "js",
+        "srcPath": "MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:MainAbility_desc",
+        "label": "$string:MainAbility_label",
+        "type": "page"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": ".MainAbility"
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.READ_HEALTH_DATA",
+        "reason": "Access heart rate and health data",
+        "usedScene": {
+          "ability": [
+            "MainAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.ACTIVITY_MOTION",
+        "reason": "Access step counter and motion data",
+        "usedScene": {
+          "ability": [
+            "MainAbility"
+          ],
+          "when": "always"
+        }
+      }
+    ]
+  }
+}

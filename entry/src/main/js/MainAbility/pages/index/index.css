@@ -1,0 +1,502 @@
+.container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.time-type-exercise-header {
+    width: 100%;
+    height: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    font-size: 22px;
+    margin-bottom: 5%;
+}
+
+.exercises-type {
+    font-size: 22px;
+}
+
+.text {
+    font-size: 24px;
+    color: #33a0e0;
+}
+
+.text-value {
+    font-size: 36px;
+}
+
+.settings-page-header {
+    font-size: 28px;
+}
+
+.settings-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.settings-page-icon {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+}
+
+.settings-page-header-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-page-list {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.settings-page-list-item {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+}
+
+.settings-page-list-card {
+    width: 100%;
+    max-width: 100%;
+    background-color: black;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 15%;
+    align-items: center;
+    text-align: center;
+}
+
+.settings-page-list-item-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.settings-page-list-item-description {
+    font-size: 24px;
+    color: #ccc;
+    text-align: center;
+}
+
+.init-page {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.init-page-title {
+    font-size: 22px;
+}
+
+.init-page-list {
+    width: 100%;
+    height: 80%;
+}
+
+.init-page-list-item {
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.init-page-list-item-card {
+    width: 80%;
+    height: 80%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.init-page-card-stack {
+    width: 100%;
+    height: 100%;
+}
+
+.init-page-card-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.init-page-card-overlay {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 16px;
+}
+
+.init-page-item-text {
+    font-size: 24px;
+    color: white;
+}
+
+.init-page-card-right-column {
+    width: 20%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.init-page-exercise-button {
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #19a3ef;
+}
+
+.init-page-list-spacer {
+    width: 100%;
+    height: 20%;
+}
+
+.countdown-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-page-white-circle {
+    width: 190px;
+    height: 190px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-page-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    background-color: #ef8800;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-page-number {
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+}
+
+.countdown-page-ready-text {
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+}
+
+.buttons-page {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buttons-page-circles-row {
+    flex-direction: row;
+    width: 100%;
+    height: 40%;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons-page-white-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 90px;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-page-orange-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 90px;
+    background-color: #ef8800;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-page-blue-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 90px;
+    background-color: #19A3EF;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-page-red-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 90px;
+    background-color: #EF4B4B;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-page-circle-icon {
+    font-size: 40px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.first-page {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.first-page-column {
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page-row {
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.duration-text-value {
+    font-size: 70px;
+}
+
+.first-page-row-section {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.first-page-row-section-sub {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50%;
+}
+
+.second-page {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.second-page-column {
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-page-heart-section {
+    width: 70%;
+    height: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ef8800;
+    border-radius: 22px;
+    margin-top: 20%;
+}
+
+.second-page-orange-section {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 40%;
+}
+
+.second-page-white-heart {
+    width: 100px;
+    height: 100px;
+    align-items: flex-end;
+}
+
+.second-page-orange-section-column {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 30%;
+}
+
+.second-page-orange-section-heart-rate {
+    font-size: 60px;
+}
+
+.second-page-orange-section-percentage {
+    font-size: 40px;
+    color: #faddb2;
+}
+
+.second-page-heart-row-section {
+    width: 70%;
+    height: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    margin-bottom: 20%;
+}
+
+.second-page-orange-text {
+    font-size: 28px;
+    color: #f48912;
+    margin-bottom: 5%;
+}
+
+.second-page-yellow-row-section {
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-page-yellow-heart {
+    width: 50px;
+    height: 50px;
+}
+
+.second-page-yellow-text {
+    font-size: 28px;
+    color: #fad304;
+}
+
+.third-page {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.third-page-column {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.third-page-image {
+    width: 30%;
+    height: 30%;
+}
+
+.third-page-row {
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 3%;
+}
+
+.third-page-sub-column {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 60%;
+}
+
+.final-page {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.final-page-text {
+    font-size: 50px;
+}
+
+.final-page-image {
+    width: 53%;
+    height: 53%;
+}
+
+.indicator-container {
+    width: 100%;
+    height: 8%;
+    top: 92%;
+    align-items: center;
+    justify-content: center;
+}
+
+.indicator-dot {
+    width: 20px;
+    height: 10px;
+    border-radius: 5px;
+    margin: 0 4px;
+}

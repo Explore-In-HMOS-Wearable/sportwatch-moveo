@@ -1,0 +1,192 @@
+<stack class="container" onBackPress="backToInitPage" onSwipe="handleSwipeAll">
+    <div class="init-page" if="{{ !activitySelected }}">
+        <div class="time-type-exercise-header">
+            <text class="time">{{ time }}</text>
+            <text class="init-page-title">DCoach</text>
+        </div>
+        <image
+                src="common/home-page-settings-icon.png"
+                class="settings-page-icon" onclick="openSettingsPage()">
+        </image>
+        <list class="init-page-list">
+            <list-item class="init-page-list-item" for="{{ exerciseList }}" key="{{ $item.name }}">
+                <div class="init-page-list-item-card">
+                    <stack class="init-page-card-stack">
+                        <image src="{{ $item.img }}" class="init-page-card-bg"></image>
+                        <div class="init-page-card-overlay">
+                            <text class="init-page-item-text">{{ $item.name }}</text>
+                            <text class="init-page-exercise-button" onclick="selectExercise($item.name)">▶</text>
+                        </div>
+                    </stack>
+                </div>
+            </list-item>
+            <list-item class="init-page-list-spacer"></list-item>
+        </list>
+    </div>
+    <div class="settings-page" if="{{ showSettingsPage }}">
+        <div class="settings-page-header-container"></div>
+        <list class="settings-page-list">
+            <list-item class="settings-page-list-item" for="{{ infoItems }}" key="{{ $idx }}">
+                <div class="settings-page-list-card">
+                    <image
+                            src="common/settings-icon.png"
+                            class="settings-page-icon"
+                            if="{{ $idx === 0 }}">
+                    </image>
+                    <text class="settings-page-list-item-title">
+                        {{ $item.title }}
+                    </text>
+                    <text class="settings-page-list-item-description">
+                        {{ $item.description }}
+                    </text>
+                </div>
+            </list-item>
+        </list>
+
+    </div>
+    <div class="countdown-page" if="{{ showCountdownPage }}">
+        <div class="countdown-page-white-circle">
+            <div class="countdown-page-circle">
+                <text class="countdown-page-number">{{ countdownValue }}</text>
+            </div>
+        </div>
+    </div>
+    <div class="countdown-page" if="{{ showReady }}">
+        <text class="countdown-page-ready-text">Ready!</text>
+    </div>
+    <swiper class="page-container"
+            if="{{ activitySelected }}"
+            index="{{ index }}"
+            onchange="change"
+            onswipe="handleSwipe"
+            indicator="true"
+            autoplay="false"
+            loop="false"
+            indicatormask="true">
+        <div class="buttons-page">
+            <div class="time-type-exercise-header">
+                <text class="time">{{ time }}</text>
+                <text class="exercises-type">{{ exercisesType }}</text>
+            </div>
+            <div class="buttons-page-circles-row">
+                <div class="buttons-page-white-circle" onclick="resetExercise()">
+                    <div class="buttons-page-red-circle">
+                        <text class="buttons-page-circle-icon">■</text>
+                    </div>
+                </div>
+                <div class="buttons-page-white-circle" onclick="continueExercise()">
+                    <div class="buttons-page-orange-circle">
+                        <text class="buttons-page-circle-icon">||</text>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-page-white-circle" onclick="stopExerciseBtn()">
+                <div class="buttons-page-blue-circle">
+                    <text class="buttons-page-circle-icon">∴</text>
+                </div>
+            </div>
+        </div>
+        <div class="first-page">
+            <div class="time-type-exercise-header">
+                <text class="time">{{ time }}</text>
+                <text class="exercises-type">{{ exercisesType }}</text>
+            </div>
+            <div class="first-page-column">
+                <div class="first-page-row">
+                    <text class="text">Duration</text>
+                    <text class="duration-text-value">{{ durationText }}</text>
+                </div>
+                <div class="first-page-row-section">
+                    <div class="first-page-row-section-sub">
+                        <text class="text">KM</text>
+                        <text class="text-value">{{ distanceKm }}</text>
+                    </div>
+                    <div class="first-page-row-section-sub">
+                        <text class="text">KM/H AVG.</text>
+                        <text class="text-value">11.32</text>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-page">
+            <div class="time-type-exercise-header">
+                <text class="time">{{ time }}</text>
+                <text class="exercises-type">{{ exercisesType }}</text>
+            </div>
+            <div class="second-page-column">
+                <div class="second-page-heart-section">
+                    <div class="second-page-orange-section">
+                        <image
+                                src="common/second-page-white-heart.png"
+                                class="second-page-white-heart">
+                        </image>
+                        <div class="second-page-orange-section-column">
+                            <text class="second-page-orange-section-heart-rate">{{ heartRate }}</text>
+                            <text class="second-page-orange-section-percentage">78%</text>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-page-heart-row-section">
+                    <text class="second-page-orange-text">Soft resistance</text>
+                    <div class="second-page-yellow-row-section">
+                        <image
+                                src="common/second-page-yellow-heart.png"
+                                class="second-page-yellow-heart">
+                        </image>
+                        <text class="second-page-yellow-text">137 AVG.</text>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="third-page">
+            <div class="time-type-exercise-header">
+                <text class="time">{{ time }}</text>
+                <text class="exercises-type">{{ exercisesType }}</text>
+            </div>
+            <div class="third-page-column">
+                <image
+                        src="common/third-page-image.png"
+                        class="third-page-image">
+                </image>
+                <div class="third-page-row">
+                    <div class="third-page-sub-column">
+                        <text class="text">KM</text>
+                        <text class="text-value">{{ distanceKm }}</text>
+                    </div>
+                    <div class="third-page-sub-column">
+                        <text class="text">DURATION</text>
+                        <text class="text-value">58'41'</text>
+                    </div>
+                </div>
+                <div class="third-page-row">
+                    <div class="third-page-sub-column">
+                        <text class="text">KCAL</text>
+                        <text class="text-value">{{ kcal }}</text>
+                    </div>
+                    <div class="third-page-sub-column">
+                        <text class="text">KM/H AVG.</text>
+                        <text class="text-value">11.32</text>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="final-page">
+            <div class="time-type-exercise-header">
+                <text class="time">{{ time }}</text>
+                <text class="exercises-type">{{ exercisesType }}</text>
+            </div>
+            <text class="final-page-text">Congrats,</text>
+            <text class="final-page-text">Ayca!</text>
+            <image
+                    src="common/final-page-image.png"
+                    class="final-page-image">
+            </image>
+        </div>
+    </swiper>
+    <div class="indicator-container" if="{{ activitySelected }}">
+        <div class="indicator-dot" for="{{ pageNums }}"
+             style="background-color: {{ dotIndex === $idx ? '#FFCB74' : '#C4C4C4' }};
+                     width: {{ dotIndex === $idx ? '20px' : '10px' }};">
+        </div>
+    </div>
+</stack>
