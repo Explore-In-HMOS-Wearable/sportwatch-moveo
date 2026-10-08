@@ -4,6 +4,8 @@
 
 Fundamentals for Wear engine feature that receiving data to lite device from mobile 
 
+> **Companion app:** This is the Lite Wearable watch side of Moveo. The Android phone app it pairs with is [moveo-mobile](https://github.com/Explore-In-HMOS-Wearable/moveo-mobile). Install both to try the full flow.
+
 # Preview
 
 <div>
